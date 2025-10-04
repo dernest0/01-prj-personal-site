@@ -125,7 +125,7 @@ h1, h2, h3 {
 	width: 140px; /* Small friendly size */
 	max-width: 100%;
 	display: block; /* So margin auto works */
-	margin: 15px 0 0 0; /* Space above */
+	margin: 15px auto 0 auto; /* Center horizontally with auto left/right */
 	border-radius: 50%; /* Circle shape */
 	border: 3px solid #2563eb; /* Accent border */
 }
