@@ -2,10 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <!-- This helps the page look better on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Personal Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- =============================== -->
+  <!-- HERO SECTION (Top welcome area) -->
+  <!-- =============================== -->
+  <section id="hero" class="hero">
+    <!-- A main heading to say hello -->
+    <h1>Hello, I'm <span class="accent">Your Name</span></h1>
+    <!-- A short sentence about you -->
+    <p class="tagline">A web development student learning to build cool things on the web.</p>
+    <!-- Optional image (use your own later). We use an existing image in the img folder -->
+    <img class="hero-image" src="img/laptop.jpg" alt="Laptop on a desk" />
+    <!-- Simple buttons (links) that jump to other sections on the same page -->
+    <p class="hero-links">
+      <a href="#bio">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </p>
+  </section>
+
+  <!-- ================== -->
+  <!-- BIO / ABOUT SECTION -->
+  <!-- ================== -->
+  <section id="bio" class="bio">
+    <h2>About Me</h2>
+    <!-- Brief paragraph about who you are -->
+    <p>I'm currently studying web development in college. I enjoy turning ideas into simple, clear web pages. As I learn more, I'll add JavaScript and more advanced styles.</p>
+    <!-- Example profile image (replace later with your photo) -->
+    <img class="profile-pic" src="img/me.png" alt="Cartoon style avatar of me" />
+  </section>
+
+  <!-- ============== -->
+  <!-- SKILLS SECTION -->
+  <!-- ============== -->
+  <section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <!-- A simple list. Add more items as you learn them. -->
+    <ul>
+      <li>HTML (structure)</li>
+      <li>CSS (styling)</li>
+      <li>JavaScript (coming soon!)</li>
+      <li>Writing clean, readable code</li>
+    </ul>
+  </section>
+
+  <!-- ================== -->
+  <!-- PROJECTS / PORTFOLIO -->
+  <!-- ================== -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <!-- This area will grow. For now we add placeholders. -->
+    <div class="project-list">
+      <!-- Project Item 1 -->
+      <div class="project-item">
+        <h3>Project 1 Title</h3>
+        <p>A short description of what this project does. I'll add the real project later.</p>
+      </div>
+      <!-- Project Item 2 -->
+      <div class="project-item">
+        <h3>Project 2 Title</h3>
+        <p>Another placeholder project. I can link to GitHub or a live demo in the future.</p>
+      </div>
+      <!-- Feel free to duplicate .project-item blocks for more -->
+    </div>
+  </section>
+
+  <!-- =============== -->
+  <!-- CONTACT SECTION -->
+  <!-- =============== -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <!-- Replace the email with your own -->
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <!-- Simple note inviting visitors to reach out -->
+    <p>Feel free to reach out if you'd like to collaborate or say hello!</p>
+  </section>
+
+  <!-- ============ -->
+  <!-- PAGE FOOTER -->
+  <!-- ============ -->
+  <footer class="footer">
+    <!-- The current year can be updated manually -->
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
 </body>
 </html>

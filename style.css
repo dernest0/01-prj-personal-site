@@ -1,1 +1,154 @@
-/* Add you CSS here */
+/* ============================= */
+/* BASIC PAGE STYLES            */
+/* ============================= */
+/* This sets the default font and removes browser default margins */
+body {
+	font-family: Arial, sans-serif; /* A common, easy-to-read font */
+	margin: 0; /* Remove default outside spacing */
+	padding: 0; /* Remove default inside spacing */
+	background-color: #f7f9fc; /* Soft light background */
+	color: #222; /* Dark gray text for readability */
+	line-height: 1.5; /* More breathing room between lines */
+}
+
+/* Give all sections some space */
+section {
+	padding: 40px 20px; /* Top/bottom and side padding */
+	max-width: 900px; /* Keep content from getting too wide on large screens */
+	margin: 0 auto 30px auto; /* Center the section and add space below */
+	background-color: #ffffff; /* White card background */
+	border: 1px solid #e2e8f0; /* Light border */
+	border-radius: 8px; /* Slightly rounded corners */
+}
+
+/* Headings style */
+h1, h2, h3 {
+	margin-top: 0; /* Remove extra space above first heading */
+	font-weight: 600; /* Slightly bold */
+}
+
+/* Accent color is used for small highlights */
+.accent {
+	color: #2563eb; /* A blue accent color */
+}
+
+/* ============================= */
+/* HERO SECTION                  */
+/* ============================= */
+.hero {
+	text-align: center; /* Center text and image */
+	background: #eef6ff; /* Light blue background */
+	border: 1px solid #d0e4ff; /* Soft border to match */
+}
+
+.hero-image {
+	width: 260px; /* Fixed width so image doesn't get huge */
+	max-width: 100%; /* Make sure it shrinks on small screens */
+	border-radius: 6px; /* Rounded corners */
+	margin: 20px 0; /* Space above and below */
+	display: block; /* So margin auto will center if needed */
+}
+
+.tagline {
+	font-size: 1.1rem; /* Slightly larger than normal text */
+	margin-bottom: 10px;
+}
+
+.hero-links a {
+	display: inline-block; /* Allows padding */
+	margin: 4px 6px; /* Space between buttons */
+	padding: 8px 14px; /* Button size */
+	text-decoration: none; /* Remove underline */
+	background-color: #2563eb; /* Blue background */
+	color: #fff; /* White text */
+	border-radius: 4px; /* Rounded corners */
+	font-size: 0.9rem; /* Slightly smaller text */
+}
+
+.hero-links a:hover {
+	background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+/* ============================= */
+/* BIO SECTION                   */
+/* ============================= */
+.bio {
+	background-color: #ffffff; /* White background */
+}
+
+.profile-pic {
+	width: 140px; /* Small friendly size */
+	max-width: 100%;
+	display: block; /* So margin auto works */
+	margin: 15px 0 0 0; /* Space above */
+	border-radius: 50%; /* Circle shape */
+	border: 3px solid #2563eb; /* Accent border */
+}
+
+/* ============================= */
+/* SKILLS SECTION                */
+/* ============================= */
+.skills ul {
+	padding-left: 20px; /* Indent list */
+	list-style: square; /* Square bullets */
+	margin: 10px 0 0 0; /* Space above list */
+}
+
+.skills li {
+	margin-bottom: 6px; /* Space between items */
+}
+
+/* ============================= */
+/* PROJECTS SECTION              */
+/* ============================= */
+.projects .project-list {
+	display: block; /* Keep simple vertical layout */
+}
+
+.project-item {
+	border: 1px solid #e2e8f0; /* Light border */
+	padding: 16px; /* Inner spacing */
+	border-radius: 6px; /* Rounded corners */
+	margin-bottom: 16px; /* Space between project cards */
+	background-color: #fdfefe; /* Slight off-white */
+}
+
+.project-item h3 {
+	margin-top: 0; /* Align with card top */
+}
+
+/* ============================= */
+/* CONTACT SECTION               */
+/* ============================= */
+.contact a {
+	color: #2563eb; /* Link color */
+}
+
+.contact a:hover {
+	text-decoration: underline; /* Show underline on hover */
+}
+
+/* ============================= */
+/* FOOTER                        */
+/* ============================= */
+.footer {
+	text-align: center; /* Center text */
+	font-size: 0.85rem; /* Smaller text */
+	padding: 25px 10px; /* Space around text */
+	background-color: #1e293b; /* Dark background */
+	color: #ffffff; /* White text */
+	margin-top: 40px; /* Space above footer */
+}
+
+/* Make sure footer links (if added) are readable */
+.footer a { color: #93c5fd; }
+.footer a:hover { color: #bfdbfe; }
+
+/* ============================= */
+/* SMALL SCREEN TWEAKS (Optional)*/
+/* ============================= */
+@media (max-width: 500px) {
+	/* Reduce padding so content fits better on very small screens */
+	section { padding: 30px 15px; }
+	.hero-image { width: 200px; }
+}
