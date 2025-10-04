@@ -45,8 +45,8 @@ h1, h2, h3 {
 	width: 260px; /* Fixed width so image doesn't get huge */
 	max-width: 100%; /* Make sure it shrinks on small screens */
 	border-radius: 6px; /* Rounded corners */
-	margin: 20px 0; /* Space above and below */
-	display: block; /* So margin auto will center if needed */
+	margin: 20px auto; /* Auto left/right centers the block image */
+	display: block; /* Block + auto margins = centered */
 }
 
 .tagline {
