@@ -220,3 +220,78 @@ h1, h2, h3 {
 	color: #555; /* Softer gray */
 	margin-top: 14px; /* Space above tip */
 }
+
+/* Styles for embedded video area */
+.song-player {
+	margin: 15px 0 20px 0; /* Space around the player */
+	background: #0f172a; /* Dark background to frame video */
+	padding: 10px; /* Inner spacing */
+	border-radius: 6px; /* Rounded corners */
+}
+
+/* Make iframe responsive-ish inside max width container */
+.song-player iframe {
+	display: block; /* Remove small gaps */
+	border: none; /* No default border */
+	border-radius: 4px; /* Slight rounding matching design */
+}
+
+/* Song links styling */
+.song-link {
+	text-decoration: none; /* Remove underline */
+	color: #2563eb; /* Accent color */
+	padding: 4px 6px; /* Clickable area */
+	display: inline-block; /* So padding works */
+	border-radius: 4px; /* Rounded corners */
+}
+
+.song-link:hover {
+	background-color: #e0ecff; /* Light hover background */
+}
+
+/* Active (currently playing) song */
+.song-link.active {
+	background-color: #2563eb; /* Blue background */
+	color: #ffffff; /* White text */
+}
+
+/* Music icon before each song link */
+.song-link::before {
+	content: '🎵'; /* Music note icon */
+	margin-right: 6px; /* Space between icon and text */
+	display: inline-block; /* Ensure spacing works nicely */
+}
+
+/* Change icon for the active (currently playing) song */
+.song-link.active::before {
+	content: '🎶'; /* Double music note to show it is playing */
+}
+
+/* Now Playing heading style */
+.now-playing {
+	font-size: 1rem; /* Normal readable size */
+	background-color: #e0ecff; /* Light blue background */
+	padding: 8px 10px; /* Space around text */
+	border-left: 4px solid #2563eb; /* Accent bar */
+	border-radius: 4px; /* Rounded corners */
+	margin-top: 10px; /* Space above */
+}
+
+/* Error box for video playback issues */
+.player-error {
+	background-color: #fff4f4; /* Light red background */
+	border: 1px solid #f5c2c2; /* Soft red border */
+	padding: 10px 12px; /* Space inside */
+	border-radius: 6px; /* Rounded corners */
+	margin-top: 10px; /* Space above */
+	font-size: 0.9rem; /* Slightly smaller text */
+}
+
+.player-error a {
+	color: #c53030; /* Red link color to match theme */
+	text-decoration: underline; /* Make it clear it's a link */
+}
+
+.player-error a:hover {
+	color: #9b2c2c; /* Darker red on hover */
+}
