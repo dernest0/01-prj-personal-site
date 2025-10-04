@@ -11,6 +11,51 @@ body {
 	line-height: 1.5; /* More breathing room between lines */
 }
 
+/* ============================= */
+/* NAVIGATION BAR                */
+/* ============================= */
+/* A simple bar that stays at the top of the page */
+.site-nav {
+	background-color: #1e293b; /* Dark background */
+	border-bottom: 2px solid #2563eb; /* Thin accent line */
+	position: sticky; /* Makes it stick to the top when scrolling */
+	top: 0; /* Position at very top */
+	z-index: 10; /* Keep it above other content */
+}
+
+/* Remove bullets and default padding from the list */
+.site-nav ul {
+	list-style: none; /* No bullets */
+	margin: 0; /* Remove default margin */
+	padding: 8px 10px; /* Space inside the nav bar */
+	text-align: center; /* Center the inline list items */
+}
+
+/* Make list items sit next to each other */
+.site-nav li {
+	display: inline; /* Inline places them on one line */
+	margin: 0 8px; /* Space between links */
+}
+
+/* Style the actual links */
+.site-nav a {
+	color: #ffffff; /* White text */
+	text-decoration: none; /* Remove underline */
+	font-size: 0.95rem; /* Slightly smaller text */
+	padding: 6px 10px; /* Clickable area */
+	border-radius: 4px; /* Rounded corners on hover background */
+}
+
+/* Change background when hovering with the mouse */
+.site-nav a:hover, .site-nav a:focus {
+	background-color: #2563eb; /* Blue background */
+}
+
+/* Optional: highlight current section link later via JavaScript by adding a class */
+.site-nav a.active {
+	background-color: #2563eb;
+}
+
 /* Give all sections some space */
 section {
 	padding: 40px 20px; /* Top/bottom and side padding */
@@ -151,4 +196,27 @@ h1, h2, h3 {
 	/* Reduce padding so content fits better on very small screens */
 	section { padding: 30px 15px; }
 	.hero-image { width: 200px; }
+}
+
+/* ============================= */
+/* SONG RECOMMENDATIONS SECTION  */
+/* ============================= */
+.songs {
+	background-color: #ffffff; /* Keep consistent with other sections */
+}
+
+.song-list {
+	list-style: disc; /* Bullet style */
+	padding-left: 20px; /* Indent list */
+	margin-top: 15px; /* Space above list */
+}
+
+.song-item {
+	margin-bottom: 6px; /* Space between songs */
+}
+
+.tip {
+	font-size: 0.85rem; /* Smaller helper text */
+	color: #555; /* Softer gray */
+	margin-top: 14px; /* Space above tip */
 }

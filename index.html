@@ -8,6 +8,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- ================== -->
+  <!-- SIMPLE NAVIGATION  -->
+  <!-- ================== -->
+  <!-- This navigation bar has links that jump to sections below -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul>
+      <!-- Home link scrolls to the top/hero section -->
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#bio">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <!-- New link to the song recommendation section -->
+      <li><a href="#songs">Songs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
   <!-- =============================== -->
   <!-- HERO SECTION (Top welcome area) -->
   <!-- =============================== -->
@@ -16,8 +33,8 @@
     <h1>Hello, I'm <span class="accent">Imanol Sanchez</span></h1>
     <!-- A short sentence about you -->
     <p class="tagline">A web development student learning to build cool things on the web.</p>
-    <!-- Optional image (use your own later). We use an existing image in the img folder -->
-    <img class="hero-image" src="img/laptop.jpg" alt="Laptop on a desk" />
+  <!-- Updated hero image to external computer image provided by user -->
+  <img class="hero-image" src="https://th.bing.com/th/id/OIP.HBpEw6lcA-gpHXQ5AAQGSgHaHa?w=188&h=188&c=7&r=0&o=7&cb=12&pid=1.7&rm=3" alt="Computer icon" />
     <!-- Simple buttons (links) that jump to other sections on the same page -->
     <p class="hero-links">
       <a href="#bio">About Me</a>
@@ -72,6 +89,23 @@
       </div>
       <!-- Feel free to duplicate .project-item blocks for more -->
     </div>
+  </section>
+
+  <!-- ======================== -->
+  <!-- SONG RECOMMENDATION LIST -->
+  <!-- ======================== -->
+  <section id="songs" class="songs">
+    <h2>Song Recommendations</h2>
+    <!-- You can replace these with your favorite songs -->
+    <p>Here are a few songs I like right now. I'll update this list as my music taste changes.</p>
+    <ul class="song-list">
+      <!-- Each list item has the song title and artist -->
+      <li class="song-item"><strong>Song Title 1</strong> – Artist Name 1</li>
+      <li class="song-item"><strong>Song Title 2</strong> – Artist Name 2</li>
+      <li class="song-item"><strong>Song Title 3</strong> – Artist Name 3</li>
+    </ul>
+    <!-- Simple tip so you remember how to edit -->
+    <p class="tip">Tip: To change a song, just edit the text inside a <code>&lt;li&gt;</code> tag.</p>
   </section>
 
   <!-- =============== -->
