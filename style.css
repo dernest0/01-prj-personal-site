@@ -3,10 +3,11 @@
 /* ============================= */
 /* This sets the default font and removes browser default margins */
 body {
-	font-family: Arial, sans-serif; /* A common, easy-to-read font */
+	font-family: "Comic Sans MS", "Comic Sans", cursive; /* Global comic style */
+	font-size: 24px; /* Base font size for entire page */
 	margin: 0; /* Remove default outside spacing */
 	padding: 0; /* Remove default inside spacing */
-	background-color: #f7f9fc; /* Soft light background */
+	background-color: #fdecef; /* Light red page background */
 	color: #222; /* Dark gray text for readability */
 	line-height: 1.5; /* More breathing room between lines */
 }
@@ -16,8 +17,8 @@ body {
 /* ============================= */
 /* A simple bar that stays at the top of the page */
 .site-nav {
-	background-color: #1e293b; /* Dark background */
-	border-bottom: 2px solid #2563eb; /* Thin accent line */
+	background-color: #8b0a23; /* Darker crimson */
+	border-bottom: 2px solid #5a0614; /* Even darker accent line */
 	position: sticky; /* Makes it stick to the top when scrolling */
 	top: 0; /* Position at very top */
 	z-index: 10; /* Keep it above other content */
@@ -41,29 +42,26 @@ body {
 .site-nav a {
 	color: #ffffff; /* White text */
 	text-decoration: none; /* Remove underline */
-	font-size: 0.95rem; /* Slightly smaller text */
 	padding: 6px 10px; /* Clickable area */
 	border-radius: 4px; /* Rounded corners on hover background */
 }
 
 /* Change background when hovering with the mouse */
 .site-nav a:hover, .site-nav a:focus {
-	background-color: #2563eb; /* Blue background */
+	background-color: #a3122f; /* Hover shade */
 }
 
 /* Optional: highlight current section link later via JavaScript by adding a class */
 .site-nav a.active {
-	background-color: #2563eb;
+	background-color: #a3122f; /* Active link shade */
 }
 
 /* Give all sections some space */
 section {
-	padding: 40px 20px; /* Top/bottom and side padding */
-	max-width: 900px; /* Keep content from getting too wide on large screens */
-	margin: 0 auto 30px auto; /* Center the section and add space below */
-	background-color: #ffffff; /* White card background */
-	border: 1px solid #e2e8f0; /* Light border */
-	border-radius: 8px; /* Slightly rounded corners */
+	padding: 40px 20px; /* Keep inner spacing */
+	max-width: 900px; /* Limit width for readability */
+	margin: 0 auto 30px auto; /* Center and add space below */
+	/* Removed background, border, and radius to get rid of box look */
 }
 
 /* Headings style */
@@ -74,7 +72,7 @@ h1, h2, h3 {
 
 /* Accent color is used for small highlights */
 .accent {
-	color: #2563eb; /* A blue accent color */
+	color: #b31230; /* Dark red accent color */
 }
 
 /* ============================= */
@@ -82,8 +80,7 @@ h1, h2, h3 {
 /* ============================= */
 .hero {
 	text-align: center; /* Center text and image */
-	background: #eef6ff; /* Light blue background */
-	border: 1px solid #d0e4ff; /* Soft border to match */
+	/* Removed background & border so hero blends with page */
 }
 
 .hero-image {
@@ -95,7 +92,6 @@ h1, h2, h3 {
 }
 
 .tagline {
-	font-size: 1.1rem; /* Slightly larger than normal text */
 	margin-bottom: 10px;
 }
 
@@ -104,22 +100,18 @@ h1, h2, h3 {
 	margin: 4px 6px; /* Space between buttons */
 	padding: 8px 14px; /* Button size */
 	text-decoration: none; /* Remove underline */
-	background-color: #2563eb; /* Blue background */
+	background-color: #b31230; /* Dark red background */
 	color: #fff; /* White text */
 	border-radius: 4px; /* Rounded corners */
-	font-size: 0.9rem; /* Slightly smaller text */
 }
 
 .hero-links a:hover {
-	background-color: #1d4ed8; /* Darker blue on hover */
+	background-color: #8b0a23; /* Darker red on hover */
 }
 
 /* ============================= */
 /* BIO SECTION                   */
 /* ============================= */
-.bio {
-	background-color: #ffffff; /* White background */
-}
 
 .profile-pic {
 	width: 140px; /* Small friendly size */
@@ -127,7 +119,7 @@ h1, h2, h3 {
 	display: block; /* So margin auto works */
 	margin: 15px auto 0 auto; /* Center horizontally with auto left/right */
 	border-radius: 50%; /* Circle shape */
-	border: 3px solid #2563eb; /* Accent border */
+	border: 3px solid #b31230; /* Dark red accent border */
 }
 
 /* ============================= */
@@ -144,6 +136,47 @@ h1, h2, h3 {
 }
 
 /* ============================= */
+/* SKILLS SIDE-BY-SIDE LAYOUT    */
+/* ============================= */
+.skills-content {
+	margin-top: 10px; /* Space below heading */
+}
+
+/* Image box and list displayed next to each other using inline-block */
+.skills-image, .skills-list {
+	display: inline-block; /* Simple side-by-side */
+	vertical-align: top; /* Align tops */
+}
+
+.skills-image {
+	width: 40%; /* Image takes part of the width */
+	max-width: 260px; /* Prevent it from getting too wide */
+	margin-right: 16px; /* Space between image and list */
+}
+
+.skills-image img {
+	max-width: 100%;
+	height: auto;
+	border: 3px solid #b31230; /* Match accent */
+	border-radius: 8px;
+}
+
+.skills-list {
+	width: 55%; /* List takes remaining space */
+	padding-left: 20px; /* Indent bullets */
+}
+
+/* Stack on very small screens */
+@media (max-width: 550px) {
+	.skills-image, .skills-list {
+		display: block; /* Stack vertically */
+		width: 100%;
+		margin-right: 0;
+	}
+	.skills-image { margin-bottom: 15px; }
+}
+
+/* ============================= */
 /* PROJECTS SECTION              */
 /* ============================= */
 .projects .project-list {
@@ -151,11 +184,11 @@ h1, h2, h3 {
 }
 
 .project-item {
-	border: 1px solid #e2e8f0; /* Light border */
+	border: 1px solid #f3c8cf; /* Light red border */
 	padding: 16px; /* Inner spacing */
 	border-radius: 6px; /* Rounded corners */
 	margin-bottom: 16px; /* Space between project cards */
-	background-color: #fdfefe; /* Slight off-white */
+	background-color: #fffafb; /* Subtle light red tint */
 }
 
 .project-item h3 {
@@ -166,7 +199,7 @@ h1, h2, h3 {
 /* CONTACT SECTION               */
 /* ============================= */
 .contact a {
-	color: #2563eb; /* Link color */
+	color: #b31230; /* Dark red link color */
 }
 
 .contact a:hover {
@@ -178,16 +211,15 @@ h1, h2, h3 {
 /* ============================= */
 .footer {
 	text-align: center; /* Center text */
-	font-size: 0.85rem; /* Smaller text */
 	padding: 25px 10px; /* Space around text */
-	background-color: #1e293b; /* Dark background */
+	background-color: #5a0614; /* Deep dark red */
 	color: #ffffff; /* White text */
 	margin-top: 40px; /* Space above footer */
 }
 
 /* Make sure footer links (if added) are readable */
-.footer a { color: #93c5fd; }
-.footer a:hover { color: #bfdbfe; }
+.footer a { color: #f2b4bd; }
+.footer a:hover { color: #fad4d9; }
 
 /* ============================= */
 /* SMALL SCREEN TWEAKS (Optional)*/
@@ -201,9 +233,6 @@ h1, h2, h3 {
 /* ============================= */
 /* SONG RECOMMENDATIONS SECTION  */
 /* ============================= */
-.songs {
-	background-color: #ffffff; /* Keep consistent with other sections */
-}
 
 .song-list {
 	list-style: disc; /* Bullet style */
@@ -216,7 +245,6 @@ h1, h2, h3 {
 }
 
 .tip {
-	font-size: 0.85rem; /* Smaller helper text */
 	color: #555; /* Softer gray */
 	margin-top: 14px; /* Space above tip */
 }
@@ -224,7 +252,7 @@ h1, h2, h3 {
 /* Styles for embedded video area */
 .song-player {
 	margin: 15px 0 20px 0; /* Space around the player */
-	background: #0f172a; /* Dark background to frame video */
+	background: #2a060b; /* Deep red toned background */
 	padding: 10px; /* Inner spacing */
 	border-radius: 6px; /* Rounded corners */
 }
@@ -239,20 +267,58 @@ h1, h2, h3 {
 /* Song links styling */
 .song-link {
 	text-decoration: none; /* Remove underline */
-	color: #2563eb; /* Accent color */
+	color: #b31230; /* Dark red accent */
 	padding: 4px 6px; /* Clickable area */
 	display: inline-block; /* So padding works */
 	border-radius: 4px; /* Rounded corners */
 }
 
 .song-link:hover {
-	background-color: #e0ecff; /* Light hover background */
+	background-color: #f8dfe3; /* Light red hover background */
 }
 
 /* Active (currently playing) song */
 .song-link.active {
-	background-color: #2563eb; /* Blue background */
+	background-color: #8b0a23; /* Dark red background */
 	color: #ffffff; /* White text */
+}
+
+/* ============================= */
+/* CONTACT SIDE-BY-SIDE LAYOUT   */
+/* ============================= */
+.contact-content {
+	margin-top: 10px;
+}
+
+.contact-image, .contact-details {
+	display: inline-block; /* Simple side by side without flex */
+	vertical-align: top;
+}
+
+.contact-image {
+	width: 40%;
+	max-width: 260px;
+	margin-right: 16px;
+}
+
+.contact-image img {
+	max-width: 100%;
+	height: auto;
+	border: 3px solid #b31230;
+	border-radius: 8px;
+}
+
+.contact-details {
+	width: 55%;
+}
+
+@media (max-width: 550px) {
+	.contact-image, .contact-details {
+		display: block;
+		width: 100%;
+		margin-right: 0;
+	}
+	.contact-image { margin-bottom: 15px; }
 }
 
 /* Music icon before each song link */
@@ -269,10 +335,9 @@ h1, h2, h3 {
 
 /* Now Playing heading style */
 .now-playing {
-	font-size: 1rem; /* Normal readable size */
-	background-color: #e0ecff; /* Light blue background */
+	background-color: #f8dfe3; /* Light red background */
 	padding: 8px 10px; /* Space around text */
-	border-left: 4px solid #2563eb; /* Accent bar */
+	border-left: 4px solid #b31230; /* Dark red accent bar */
 	border-radius: 4px; /* Rounded corners */
 	margin-top: 10px; /* Space above */
 }
@@ -284,7 +349,11 @@ h1, h2, h3 {
 	padding: 10px 12px; /* Space inside */
 	border-radius: 6px; /* Rounded corners */
 	margin-top: 10px; /* Space above */
-	font-size: 0.9rem; /* Slightly smaller text */
+}
+/* Force Comic Sans + 24px on common elements (safety net) */
+body, h1, h2, h3, p, a, li, .hero-links a, .song-link, .now-playing, .footer, .tip, .player-error, .project-item h3 {
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-size: 24px;
 }
 
 .player-error a {
